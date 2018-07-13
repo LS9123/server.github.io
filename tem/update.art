@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>更新</title>
+</head>
+<body>
+    <h2>修改</h2>
+    <form action="/update" method="POST" enctype="multipart/form-data">
+        <input type="hidden" value="{{results[0].Id}}" name="id" id="">
+        <input type="text" value="{{results[0].name}}" name="name"><br>
+        <input type="file" name="icon" id=""><br>
+        <img src="{{results[0].icon}}" alt="">
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 30px;
+            color: gold;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 10px;
+        }
+        li{
+            width: 300px;
+            height: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        img{
+            display: block;
+            width: 260px;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>查询</h1>
+    <form action="/index" method="GET">
+        <input type="text" name="name" value="{{content}}" id="">
+        <input type="submit">
+    </form>
+    <h1>新增</h1>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" id="">
+        <input type="file" name="icon" id="">
+        <input type="submit" >
+    </form>
+    <div class="header">
+        英雄展示
+    </div>
+    <ul>
+        {{each results}}
+        <li>
+            <a href="/update?id={{$value.Id}}">
+                <img src="{{$value.icon}}" alt="">
+            </a>
+            <a href="/delete?id={{$value.Id}}">{{$value.name}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "server.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LS9123/server.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LS9123/server.github.io/issues"
+  },
+  "homepage": "https://github.com/LS9123/server.github.io#readme",
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "express": "^4.16.3",
+    "multiparty": "^4.1.4",
+    "mysql": "^2.15.0"
+  }
+}
